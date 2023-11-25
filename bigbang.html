@@ -1,0 +1,418 @@
+<html>
+<head>
+    <title>Food Order Online</title>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Add your existing CSS styling here */
+
+        /* Media query for screens smaller than 600px */
+        @media (max-width: 600px) {
+            /* CSS rules for smaller screens */
+        }
+    </style>
+
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+        }
+
+
+
+        h1 {
+            text-align: center;
+            color: #FF0000;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item {
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #CCCCCC;
+            box-shadow: 2px 2px 5px #AAAAAA;
+        }
+        .item img {
+            width: 100%;
+            height: auto;
+        }
+        .item h3 {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .item p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .item button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00FF00;
+            border: none;
+            cursor: pointer;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #CCCCCC;
+            box-shadow: 2px 2px 5px #AAAAAA;
+        }
+        .cart h2 {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .cart ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .cart li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .cart li span {
+            font-weight: bold;
+        }
+        .cart button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0000FF;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <h1> Select your favorite meals  </h1>
+
+    <div class="container">
+        <div class="menu">
+            
+                <!-- You can add more items here -->
+                <div class="item">
+
+                    <h2>   <Menu> Pizza </Menu> </h2>
+                    
+              
+                    
+                    <input type="radio" name="pizza" value="Pizza" data-price="100">  Ham pizza <br>
+                    <img src="Ham.jpeg" alt="Pizza">
+                    <button onclick="addToCart('Ham Pizza',100)">Add to Cart</button>
+  
+                    <input type="radio" name="pizza" value="pizza " data-price="150"> Margerita pizza <br><br>
+                    <img src="Margherita.jpeg" alt="Pizza">
+                    <button onclick="addToCart('Margherita Pizza',150)">Add to Cart</button>
+  
+                    <input type="radio" name="pizza" value="pizza" data-price="200"> Tuna pizza <br><br>
+                    <img src="Tuna pizza.jpeg" alt="Pizza">
+                    <button onclick="addToCart('Tuna Pizza',200)">Add to Cart</button>
+  
+                    <input type="radio" name="pizza" value="pizza" data-price="300"> Special pizza <br><br>
+                    <img src="Special.jpeg" alt="Pizza">
+                    
+                    <button onclick="addToCart('Special Pizza',300)">Add to Cart</button>
+  
+
+
+                         </div>
+              
+              
+              
+              
+              
+                <div class="item">
+                    <h2> <Menu> Burger </Menu> </h2>
+                 
+                    <input type="radio" name="burger" value="Burger" data-price="90">  Hamburger<br>
+                    <img src="Ham1.jpeg" alt="burger">
+                    <button onclick="addToCart('Hamburger',90)">Add to Cart</button>
+               
+                    <input type="radio" name="burger" value="Burger" data-price="150"> Cheese burger<br><br>
+                    <img src="cheeseburger.jpeg" alt="burger">
+                        <button onclick="addToCart('Cheese burger ',150)">Add to Cart</button>
+               
+                    <input type="radio" name="burger" value="Burger" data-price="190"> Double burger <br><br>
+                    <img src="double.jpeg" alt="burger">
+                    <button onclick="addToCart('Double Burger ',190)">Add to Cart</button>
+               
+                  
+                    <input type="radio" name="burger" value="Burger" data-price="200"> Special burger <br><br>
+                    <img src="Special_1.jpeg" alt="burger">
+                    <button onclick="addToCart('Special Burger ',200)">Add to Cart</button>
+               
+                     <input type="radio" name="burger" value="Burger" data-price="190"> Sandwitch<br> <br>
+                     <img src="Sandwitch.jpeg" alt="burger">
+                     <button onclick="addToCart('Sandwitch ',125)">Add to Cart</button>
+               
+                  </div>
+                <div class="item">
+                    <h2> <Menu> World Traditional Foods </Menu> </h2>
+                   
+                    <input type="radio" name="additionalFood" value="additionalFood" data-price="300"> Indian<br><br>
+                    <img src="Indian_food.jpeg" alt="additionalFood">
+                    <button onclick="addToCart('Indian food ',300)">Add to Cart</button>
+               
+                    <input type="radio" name="additionalFood" value="additionalFood" data-price="250"> Tuna salad<br><br>
+                    <img src="Tuna salad.jpeg" alt="additionalFood">
+                    <button onclick="addToCart(' South Korean food',250)">Add to Cart</button>
+                    <input type="radio" name=" Mexican" value="additionalFood" data-price="260"> Mexican <br><br>
+                    <img src="Mexican.jpeg" alt="additionalFood">
+                    <button onclick="addToCart('Mexican food',260)">Add to Cart</button>
+                    <input type="radio" name="chinese" value="additionalFood" data-price="190"> chinese<br><br>
+                    <img src="chinese food.jpeg" alt="additionalFood">
+                    <button onclick="addToCart('chinese food',190)">Add to Cart</button>
+                   
+       
+                </div>
+
+            
+        
+
+           <div class="item">
+            <h2> <Menu> Drinks </Menu> </h2>
+
+       
+            <input type="radio" name="Drinks" value="Soda" data-price="70"> Soda <br><br>
+            <img src="Soda.jpeg" alt="Drinks">
+            <button onclick="addToCart('Soda',70)">Add to Cart</button>
+            <input type="radio" name="Drinks" value="beer" data-price="50"> beer <br><br>
+            <img src="beer.jpeg" alt="Drinks">
+            <button onclick="addToCart('Beer',50)">Add to Cart</button>
+            <input type="radio" name="Drinks" value="smoothies" data-price="85"> smoothies <br> <br>
+            <img src="smoothies.jpeg" alt="Drinks">
+            <button onclick="addToCart('smoothies',85)">Add to Cart</button>
+            
+        
+        </div>
+        
+
+      
+
+
+<div  class="item">
+    <h2> <Menu> Other foods </Menu> </h2>
+
+
+    <input type="radio" name="Other food" value="Buffalo" data-price="250"> Buffalo <br><br>
+    <img src="Buffalo.jpeg" alt="Other food">
+    <button onclick="addToCart('Buffalo',250)">Add to Cart</button>
+    <input type="radio" name="Other food" value="wings" data-price="230"> wings <br><br>
+    <img src="wings.jpeg" alt="Other food">
+    <button onclick="addToCart('wings',230)">Add to Cart</button>
+    <input type="radio" name="Other food" value="Chicken" data-price="185"> Chicken<br> <br>
+    <img src="Chicken.jpeg" alt="Drinks">
+    <button onclick="addToCart('Chicken',185)">Add to Cart</button>
+
+
+
+
+
+</div>
+
+
+
+    <div class="item">
+
+    <h2>  <menu> Dessert food </menu> </h2>
+<input type="radio" name="Dessert food" value="Pancake" data-price="150"> Pancake <br><br>
+ <img src="Pancake.jpeg" alt="Dessert food">
+<button onclick="addToCart('Pancake',150)">Add to Cart</button>
+<input type="radio" name="Dessert food" value="Ice cream" data-price="185"> Ice cream<br> <br>
+ <img src="Ice cream.jpeg" alt="Drinks">
+<button onclick="addToCart('Ice cream',185)">Add to Cart</button>
+
+
+
+</div>
+
+
+
+        
+        
+   
+
+
+
+    
+
+    <!-- This is the cart section -->
+    <div class="container">
+        <div class="cart">
+            
+                <!-- This is where the cart items will be displayed -->
+                <h2>Your Cart</h2>
+                <ul id="cart-list">
+
+                </ul>
+
+                <!-- This is where the total amount will be displayed -->
+                <p>Total Amount:</p>
+                <p id="total-amount">$0.00</p>
+
+                <!-- This is the checkout button -->
+                <button onclick="checkout()">paynow</button>
+
+            
+        </div>
+    </div>
+
+    <!-- This is the script section -->
+    <script>
+
+        
+            
+                // This is a global variable to store the cart items
+                var cart = [];
+
+                // This function adds an item to the cart
+                function addToCart(name,price) {
+
+                    // Create an object to store the item details
+                    var item = {
+                        name:name,
+                        price:price,
+                        quantity:1
+                    };
+
+                    // Check if the item already exists in the cart
+                    var found = false;
+
+                    for (var i=0; i<cart.length; i++) {
+
+                        // If the item exists, increment its quantity
+                        if (cart[i].name == name) {
+                            cart[i].quantity++;
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    // If the item does not exist, add it to the cart
+                    if (!found) {
+                        cart.push(item);
+                    }
+
+                    // Update the cart display
+                    updateCart();
+                }
+
+                // This function updates the cart display
+                function updateCart() {
+
+                    // Get the cart list element
+                    var cartList = document.getElementById("cart-list");
+
+                    // Clear the cart list
+                    cartList.innerHTML = "";
+
+                    // Loop through the cart items
+                    for (var i=0; i<cart.length; i++) {
+
+                        // Create a list item element
+                        var listItem = document.createElement("li");
+
+                        // Create a span element to show the item name
+                        var nameSpan = document.createElement("span");
+                        nameSpan.textContent = cart[i].name;
+
+                        // Create a span element to show the item quantity
+                        var quantitySpan = document.createElement("span");
+                        quantitySpan.textContent = cart[i].quantity;
+
+                        // Create a span element to show the item price
+                        var priceSpan = document.createElement("span");
+                        priceSpan.textContent = "$" + (cart[i].price * cart[i].quantity).toFixed(2);
+
+                        // Append the span elements to the list item element
+                        listItem.appendChild(nameSpan);
+                        listItem.appendChild(quantitySpan);
+                        listItem.appendChild(priceSpan);
+
+                        // Append the list item element to the cart list element
+                        cartList.appendChild(listItem);
+                    }
+
+                    // Update the total amount display
+                    updateTotal();
+                }
+
+                // This function updates the total amount display
+                function updateTotal() {
+
+                    // Get the total amount element
+                    var totalAmount = document.getElementById("total-amount");
+
+                    // Initialize the total amount to zero
+                    var total = 0;
+
+                    // Loop through the cart items and add their prices
+                    for (var i=0; i<cart.length; i++) {
+                        total += cart[i].price * cart[i].quantity;
+                    }
+
+                    // Set the total amount element text content to the total amount
+                    totalAmount.textContent = "$" + total.toFixed(2);
+                }
+
+                // This function performs the checkout action
+                function checkout() {
+
+                    // Check if the cart is empty
+                    if (cart.length == 0) {
+
+                        // Alert the user that the cart is empty
+                        alert("Your cart is empty. Please add some items first.");
+
+                    } else {
+
+                        // Confirm with the user that they want to checkout
+                        var confirmCheckout = confirm("Are you sure you want to paynow?");
+
+                        if (confirmCheckout) {
+
+                            // Redirect the user to a payment page (you can change this URL)
+                            window.location.href = "https://www.cbeib.com.et/ARCIB-4/servlet/BrowserServlet";
+
+
+                            
+
+                            // Clear the cart
+                            cart = [];
+
+                            // Update the cart display
+                            updateCart();
+                        }
+                    }
+                }
+            
+        
+    </script>
+</body>
+
+
+
+<p>Click <a href="Sami.html">here</a> to go to the About page.</p>
+
+
+<script src="js/main.js"></script>
+<script src="js/jquery-min.js"></script>
+
+
+
+
+</html>
+
