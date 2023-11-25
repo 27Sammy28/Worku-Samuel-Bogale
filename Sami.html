@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment System</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      /* Add your existing CSS styling here */
+
+      /* Media query for screens smaller than 600px */
+      @media (max-width: 600px) {
+          /* CSS rules for smaller screens */
+      }
+  </style>
+
+
+
+<style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+
+    body {
+      background-image: url('paymenow.png');
+      color: rgb(3, 3, 3);
+    }
+
+    h1 {
+      background-color: rgb(221, 221, 221);
+      color: rgb(255, 0, 0);
+    }
+
+    div {
+      background-color: rgb(82, 58, 104);
+      color: rgb(248, 7, 7);
+    }
+  </style> 
+</head>
+<body>
+
+
+  
+
+  <h1>Please fill this form correctly and upload your bank receipt and press the submit button once you have done</h1>
+
+
+  <form action="/action_page.php" method="post">
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required  minlength="8">
+     <br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required minlength="8">
+         <br>
+
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+   <br>
+  <div class="container" style="background-color:#ffff">
+
+    <br>
+
+    <p>Please upload your bank receipt:</p>
+
+    <form action="/action_page.php">
+      
+      <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required />
+
+    </form>  
+  
+    
+  </form>
+  
+
+
+
+
+
+
+
+  
+  <h2>Choose your  Methods  of delivery</h2>
+
+  <select id="deliveryMethod" name="deliveryMethod" onchange="showMap()" required >
+    >
+    <option value="">Select an option</option>  
+    <option value="pickup">Pickup</option>  
+    <option value="delivery">Delivery</option>
+  </select>
+
+
+
+  
+  <br>
+  <input type="submit">
+  <br>
+  
+  <iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="800"
+  height="500"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+
+
+</iframe>
+
+
+
+
+<title>Rating Form</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Rating System</h1>
+
+  <p class="question">How do you like our system?</p>
+
+  <div class="rating-stars">
+    <input type="radio" id="star5" name="rating" value="5">
+    <label for="star5">😃</label>
+    <input type="radio" id="star4" name="rating" value="4">
+    <label for="star4">😊</label>
+    <input type="radio" id="star3" name="rating" value="3">
+    <label for="star3">😐 </label>
+    <input type="radio" id="star2" name="rating" value="2">
+    <label for="star2">😔</label>
+    <input type="radio" id="star1" name="rating" value="1">
+    <label for="star1">😡</label>
+  </div>
+  <textarea id="comment" placeholder="Enter your comment"></textarea>
+
+  <button id="submit">Submit</button>
+</div>
+
+<script src="script.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jquery-min.js"></script>
+
+
+<script>
+
+
+const submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const rating = document.querySelector('input[name="rating"]:checked').value;
+  const comment = document.getElementById('comment').value;
+
+  if (rating && comment && comment.length > 25) {
+
+    // Send notification email with the rating and comment
+    sendNotificationEmail(rating, comment);
+
+    // Display success message
+    alert('Thank you for your comment!');
+
+    // Clear the form
+    document.querySelector('input[name="rating"]:checked').checked = false;
+    document.getElementById('comment').value = '';
+  } else {
+    alert(' Select a rating and please  enter a real comments.');
+  }
+});
+
+function sendNotificationEmail(rating, comment) {
+  // Replace this with your own implementation to send an email
+  console.log(`Notification email sent: Rating: ${rating}, Comment: ${comment}`);
+}
+
+
+
+</script>
+</body>
+</html>
