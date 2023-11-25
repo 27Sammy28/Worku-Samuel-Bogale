@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <body>
+
+
+    
+    <style>
+             body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+        }
+        h1 {
+            text-align: center;
+            color: #FF0000;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item {
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #CCCCCC;
+            box-shadow: 2px 2px 5px #AAAAAA;
+        }
+        .item img {
+            width: 100%;
+            height: auto;
+        }
+        .item h3 {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .item p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .item button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00FF00;
+            border: none;
+            cursor: pointer;
+        }
+        
+    </style>
+     
+  <center>  
+         <h2>
+             
+ 
+    <h1>Menu Browsing and Selection</h1>
+
+    
+<div id="menuItems" style="display: none;">
+  
+  <h2>Burger Menu</h2>
+  <input type="radio" name="burger" value="Burger" data-price="50">  Hamburger ($50)<br>
+  <img src="Ham1.jpeg" alt="burger">
+
+  <input type="radio" name="burger" value="Cheese burger" data-price="150"> Cheese burger  ($150)<br><br>
+  <img src="cheeseburger.jpeg" alt="burger">
+
+  <input type="radio" name="burger" value="Double burger" data-price="180"> Double burger  ($180)<br><br>
+  <img src="double.jpeg" alt="burger">
+
+  <input type="radio" name="burger" value="Special burger" data-price="200"> Special burger  ($200)<br><br>
+  <img src="Special_1.jpeg" alt="burger">
+
+   <input type="radio" name="burger" value="Sandwitch" data-price="190"> Sandwitch ($190) <br> <br>
+   <img src="Sandwitch.jpeg" alt="burger">
+
+  
+  <h2>Pizza Menu</h2>
+  <input type="radio" name="pizza" value="Pizza" data-price="100">  Ham pizza ($100)<br>
+  <img src="Ham.jpeg" alt="Pizza">
+
+  <input type="radio" name="pizza" value="Margerita pizza " data-price="150"> Margerita pizza ($150)<br><br>
+  <img src="Margherita.jpeg" alt="Pizza">
+
+  <input type="radio" name="pizza" value="Tuna pizza" data-price="200"> Tuna pizza ($200)<br><br>
+  <img src="Tuna pizza.jpeg" alt="Pizza">
+
+  <input type="radio" name="pizza" value="Special pizza" data-price="300"> Special pizza ($300)<br><br>
+  <img src="Special.jpeg" alt="Pizza">
+  
+  <h2>Salad Menu</h2>
+  <input type="radio" name="salad" value="Salad" data-price="10"> Salad ($10)<br><br>
+  <img src="salad.jpeg" alt="salad">
+<h2>Ethiopian Traditional Foods</h2>
+<input type="radio" name="additionalFood" value="Kitfo" data-price="80"> Kitfo ($80)<br><br>
+<img src="Tradditonal.jpeg" alt="additionalFood">
+<input type="radio" name="additionalFood" value="Tibs" data-price="90"> Tibs ($90)<br><br>
+<img src="Tibs.jpeg" alt="additionalFood">
+
+
+<h2> Drinks </h2>
+<input type="radio" name="Drinks" value="Soda" data-price="10"> Soda ($10)<br><br>
+<img src="Soda.jpeg" alt="Drinks">
+<input type="radio" name="Drinks" value="beer" data-price="5"> beer ($5)<br><br>
+<img src="beer.jpeg" alt="Drinks">
+
+
+<input type="radio" name="Drinks" value="smoothies" data-price="15"> smoothies ($15) <br> <br>
+<img src="smoothies.jpeg" alt="Drinks">
+
+
+
+
+
+</div>
+
+
+
+
+
+<button onclick="showMenu()">Select Favorite Dish</button>
+<button onclick="calculatePrice()">Calculate Total Price</button>tal Price: <span id="totalPrice"></span></h3>
+   
+</center>
+
+    </div>
+  </body>
+
+            
+
+
+
+<title>User Registration and Profile for online food ordring and payment in Ethiopia</title>
+
+<script>
+  function calculatePrice() {
+    var total = 0;
+
+  // Get the selected burger
+  var burgerSelection = document.querySelector('input[name="burger"]:checked');
+  if (burgerSelection) {
+    total += parseInt(burgerSelection.getAttribute("data-price"));
+  }
+
+  // Get the selected pizza
+  var pizzaSelection = document.querySelector('input[name="pizza"]:checked');
+  if (pizzaSelection) {
+    total += parseInt(pizzaSelection.getAttribute("data-price"));
+  }
+
+  // Get the selected salad
+  var saladSelection = document.querySelector('input[name="salad"]:checked');
+  if (saladSelection) {
+    total += parseInt(saladSelection.getAttribute("data-price"));
+  }
+
+  // Get the selected additional food
+  var additionalFoodSelection = document.querySelector('input[name="additionalFood"]:checked');
+  if (additionalFoodSelection) {
+    total += parseInt(additionalFoodSelection.getAttribute("data-price"));
+  }
+
+  var DrinksSelection = document.querySelector('input[name="Drinks"]:checked');
+  if (DrinksSelection) {
+    total += parseInt(DrinksSelection.getAttribute("data-price"));
+  }
+
+
+  if (total > 0) {
+    alert("The total price is: $" + total);
+  } else {
+    alert("Please select at least one item.");
+  }
+}
+  
+  function showMenu() {
+    var menuItems = document.getElementById("menuItems");
+    menuItems.style.display = "block";
+  }
+
+
+  
+  </script>
+  
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu Browsing and Selection</title>
+
+<script>
+  function selectDish() {
+    // Perform actions when a dish is selected
+    
+    // Redirect to payment page
+    window.location.href = "payment.html";
+  }
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Placement and Payment</title>
+
+<script>
+  function makePayment() {
+    // Perform actions for selecting payment options
+    
+    // Redirect to thank you page 
+    window.location.href = "https://www.paypal.com/";
+
+ 
+ 
+ 
+ }
+</script>
+
+</head>
+<body>
+  <h1>Placement and Payment</h1>
+  
+  <form id="paymentForm" onsubmit="event.preventDefault(); makePayment();">
+    <label for="deliveryOption">Select Delivery or Pickup:</label>
+    <select id="deliveryOption" name="deliveryOption">
+      <option value="delivery">Delivery</option>
+      <option value="pickup">Pickup</option>
+    </select><br><br>
+    
+    <label for="address">Address or Location:</label>
+    <input type="text" id="address" name="address" required><br><br>
+    
+    <label for="timeSlot">Preferred Time Slot:</label>
+    <input type="text" id="timeSlot" name="timeSlot" required><br><br>
+    
+    <button type="submit">Pay Now</button>
+
+  </form>
+
+</h2>
+<p>Click <a href="Samuel.html">here</a> to go to the About page.</p>
+
+</body>
+</html>
+
+

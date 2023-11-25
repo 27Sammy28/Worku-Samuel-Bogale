@@ -1,0 +1,267 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 900;
+}
+
+p {
+	line-height: 1.65em;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.header {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+	background: #7abcff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+	color: #fff;
+    padding-top: 60px;
+	padding-bottom: 140px;
+	color: #fff;
+}
+
+.wrapper {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.offer {
+    width: 700px;
+}
+.title {
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+
+.title__span {
+	font-size: 48px;
+	letter-spacing: 2px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+}
+
+.offer__text {
+    font-size: 14px;
+	width: 350px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.text {
+	padding: 30px 30px;
+	background-color: coral;
+}
+
+.desktop {
+	margin-top: 20px;
+	width: 480px;
+}
+
+.btn {
+	width: 220px;
+	height: 55px;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	display: block;
+	text-decoration: none;
+	background-color: #ffd429;
+	padding: 15px 0px;
+	text-align: center;
+	transition: all 0.5s ease;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn:hover{
+    background-color: #edc730;
+    cursor: pointer;
+}
+
+
+.expect {
+	padding-top: 105px;
+	padding-bottom: 115px;
+}
+
+.section-title {
+	font-size: 30px;
+	text-align: center;
+}
+
+.wishes {
+	margin-top: 65px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.wish {
+	width: 300px;
+	text-align: center;
+}
+
+.wish__title {
+	margin-top: 30px;
+}
+
+.wish__text {
+	margin-top: 18px;
+}
+
+.mail {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: #ecf3f8;
+}
+
+.form {
+	margin: 60px auto 0 auto;
+	width: 350px;
+}
+
+.input {
+	width: 100%;
+	height: 47px;
+	margin-bottom: 18px;
+	border: 1px solid #bbbbbb;
+	padding-left: 27px;
+}
+
+.btn-form {
+	border: 1px solid #bbbbbb;
+	width: 100%;
+	height: 55px;
+	color: black;	
+	display: block;
+	text-decoration: none;
+	background-color: #ffd429;
+	padding: 15px 0px;
+	text-align: center;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	padding-top: 60px;
+	padding-bottom: 60px;
+	color: #fff;
+	text-align: center;
+}
+
+
+
+@media screen and (max-width: 1200px) 
+{
+	.container{
+		width: 960px;
+	}
+}
+
+@media screen and (max-width: 992px) 
+{
+	.container{
+		width: 720px;
+	}
+	.wrapper{
+		flex-direction: column;
+	}
+	.offer{
+		width: 100%;
+		margin-top: 40px;
+	}
+	.offer__text{
+		width: 100%;
+	}
+	.desktop{
+		display: block;
+		margin: 0 auto;
+		margin-top: 40px;		
+	}
+	.header{
+		padding-bottom: 110px;
+	}
+	.wishes{
+		display: block;
+	}
+	.wish{
+		margin: 40px auto;
+	}
+
+}
+
+@media screen and (max-width: 768px) 
+{
+	.container{
+		width: 540px;
+	}
+	.desktop{
+		width: 440px;
+	}
+	.btn{
+		width: 100%;
+	}
+	.form{
+		margin: 60px auto 0  auto;
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 576px) 
+{
+	.container{
+		width: 90%;
+		text-align: center;
+	}
+	.desktop{
+		width: 90%;
+	}
+	.expect{
+		padding-bottom: 100px;
+	}
+	.footer{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+
+.red{
+	color: red;
+}
+
+
+
+
+
+  
+
+
+
+

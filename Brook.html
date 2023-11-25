@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(19, 34, 168, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>Welcome to our cutting-edge online Food Ordering and Payment System, where convenience meets excellence. We take immense pride in serving you round-the-clock, ensuring seamless experiences no matter the hour.</p>
+  <p>Join our network today and embark on a journey you will never forget</p>
+</div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Sami.jpg" alt="Samuel" style="width:100%">
+      <div class="container">
+        <h2>Samuel Bogale</h2>
+        <p class="Programmer">Computer programmer and Web designer</p>
+        <p>data scientist.</p>
+        <p>samibogale2013@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="brook.jpg" alt="Brook" style="width:100%">
+      <div class="container">
+        <h2>Brook Bogale</h2>
+        <p class="Business man">Restaurant Owner</p>
+        <p> business analyst.</p>
+        <p>brookbogale@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="Magi.jpg" alt="Mag" style="width:100%">
+      <div class="container">
+        <h2>Magi Bogale</h2>
+        <p class="Manager">General Manager </p>
+        <p> business man.</p>
+        <p>magi@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="column">
+        <div class="card">
+          <img src="Caleb.jpg" alt="Caleb" style="width:100%">
+          <div class="container">
+            <h2>Caleb Bogale</h2>
+            <p class="Web designer">Web designer and delivery</p>
+            <p> Web designer.</p>
+            <p>caleb20211@gmail.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+    
+
+
+</div>
+
+
+
+
+</body>
+</html>
